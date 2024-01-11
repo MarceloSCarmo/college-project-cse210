@@ -7,11 +7,13 @@ class Program
     {
         int guess = 0;
 
+        // Generating a random number
         Random RandomNumberGenerator = new Random();
         int magicNumber = RandomNumberGenerator.Next(1,100);
 
         while (guess != magicNumber)
         {
+            // This question will be made every time the while condition isn't satisfied
             Console.WriteLine("What is your guess?");
             string userGuess = Console.ReadLine();
             guess = int.Parse(userGuess);
