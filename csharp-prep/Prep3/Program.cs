@@ -5,32 +5,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        int guess = 0;
+        string playAgain = "yes";
 
-        // Generating a random number
-        Random RandomNumberGenerator = new Random();
-        int magicNumber = RandomNumberGenerator.Next(1,100);
-
-        while (guess != magicNumber)
+        do
         {
-            // This question will be made every time the while condition isn't satisfied
-            Console.WriteLine("What is your guess?");
-            string userGuess = Console.ReadLine();
-            guess = int.Parse(userGuess);
+            // Generating a random number
+            Random RandomNumberGenerator = new Random();
+            int magicNumber = RandomNumberGenerator.Next(1,100);
 
-            if (guess > magicNumber)
+            int count = 0;
+            int guess = 0;
+
+            while (guess != magicNumber)
             {
-                Console.WriteLine("Lower");
+                count ++;
+
+                // This question will be made every time the while condition isn't satisfied
+                Console.WriteLine("What is your guess?");
+                string userGuess = Console.ReadLine();
+                guess = int.Parse(userGuess);
+
+                if (guess > magicNumber)
+                {
+                    Console.WriteLine("Lower");
+                }
+                else if (guess < magicNumber)
+                {
+                    Console.WriteLine("Higher");
+                }
+                else
+                {
+                    Console.WriteLine("You guessed it!");
+                }   
             }
-            else if (guess < magicNumber)
-            {
-                Console.WriteLine("Higher");
-            }
-            else
-            {
-                Console.WriteLine("You guessed it!");
-            }   
-        } 
+            Console.WriteLine($"It took {count} guesses");
+            
+            Console.WriteLine("Would you like to play again?");
+            playAgain = Console.ReadLine();
+
+        } while (playAgain == "yes");
 
     }
 }
