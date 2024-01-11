@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // This inital condition will make the game starts
         string playAgain = "yes";
 
         do
@@ -13,7 +14,9 @@ class Program
             Random RandomNumberGenerator = new Random();
             int magicNumber = RandomNumberGenerator.Next(1,100);
 
+            // count the number of guesses
             int count = 0;
+            // recieves the intial guess, it will alwyas be different from the magicNumber
             int guess = 0;
 
             while (guess != magicNumber)
@@ -43,7 +46,7 @@ class Program
             Console.WriteLine("Would you like to play again?");
             playAgain = Console.ReadLine();
 
-        } while (playAgain == "yes");
+        } while (playAgain.ToUpper() == "YES");
 
     }
 }
