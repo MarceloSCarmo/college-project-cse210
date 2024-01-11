@@ -11,7 +11,7 @@ class Program
         // Will sum the amount of numbers
         float count = 0;
 
-        // largest number
+        // variable holds the largest number in the list
         int largest = 0;
 
         // creating a list of numbers
@@ -29,6 +29,7 @@ class Program
             {
                 numbers.Add(number);
                 
+                // finding the largest number in the list
                 if (number > largest)
                 {
                     largest = number;
