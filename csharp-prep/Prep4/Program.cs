@@ -11,6 +11,9 @@ class Program
         // Will sum the amount of numbers
         float count = 0;
 
+        // largest number
+        int largest = 0;
+
         // creating a list of numbers
         List<int> numbers = new List<int>();
 
@@ -25,6 +28,11 @@ class Program
             if (number != 0)
             {
                 numbers.Add(number);
+                
+                if (number > largest)
+                {
+                    largest = number;
+                }
             }
         }
         Console.WriteLine($"The sum is: {count}");
@@ -33,6 +41,6 @@ class Program
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine();
 
-        Console.WriteLine($"This is the size of the list: {numbers.Count}");
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
