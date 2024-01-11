@@ -1,14 +1,14 @@
 using System;
+using System.Security.Cryptography;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("What is the magic number?");
-        string userInput = Console.ReadLine();
-        int magicNumber = int.Parse(userInput);
-
         int guess = 0;
+
+        Random RandomNumberGenerator = new Random();
+        int magicNumber = RandomNumberGenerator.Next(1,100);
 
         while (guess != magicNumber)
         {
