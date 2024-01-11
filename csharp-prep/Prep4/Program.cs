@@ -9,7 +9,7 @@ class Program
     static void Main(string[] args)
     {
         // Will sum the amount of numbers
-        int count = 0;
+        float count = 0;
 
         // creating a list of numbers
         List<int> numbers = new List<int>();
@@ -29,7 +29,7 @@ class Program
         }
         Console.WriteLine($"The sum is: {count}");
 
-        double average = count / numbers.Count;
+        float average = count / numbers.Count;
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine();
 
