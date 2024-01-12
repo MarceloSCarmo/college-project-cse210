@@ -24,6 +24,7 @@ class Program
             
             // converting string into int
             number = int.Parse(userInput);
+            
             // adding itens to the list
             if (number != 0)
             {
