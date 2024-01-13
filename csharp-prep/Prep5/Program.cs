@@ -4,7 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep5 World!");
+        DisplayWelcome();
+
+        string userName = PromptUserName();
+        int userNumber = PromptUserNumber();
+
+        int squaredNumber = SquareNumber(userNumber);
+
+        DisplayResult(userName, squaredNumber);
     }
 
     // Displays the message, "Welcome to the Program!"
@@ -14,18 +21,18 @@ class Program
     }
 
     // Asks for and returns the user's name (as a string)
-    static string PromptUserName(string userName)
+    static string PromptUserName()
     {
         Console.WriteLine("What is your name?");
-        userName = Console.ReadLine();
+        string userName = Console.ReadLine();
         return userName;
     }
 
     // Asks for and returns the user's favorite number (as an integer)
-    static int PromptUserNumber(string userFavoriteNumber)
+    static int PromptUserNumber()
     {
         Console.WriteLine("What is your favorite number?");
-        userFavoriteNumber = Console.ReadLine();
+        string userFavoriteNumber = Console.ReadLine();
         // Converting string to int
         int FavoriteNumber = int.Parse(userFavoriteNumber);
 
@@ -33,5 +40,16 @@ class Program
     }
 
     // Accepts an integer as a parameter and returns that number squared (as an integer)
+    static int SquareNumber(int FavoriteNumber)
+    {
+        int square = FavoriteNumber * FavoriteNumber;
 
+        return square;
+    }
+
+    // Accepts the user's name and the squared number and displays them.
+    static void DisplayResult(string userName, int square)
+    {
+        Console.WriteLine($"{userName}, the square of your number is {square}");
+    }
 }
