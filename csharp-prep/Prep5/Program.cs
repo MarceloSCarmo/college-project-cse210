@@ -24,11 +24,14 @@ class Program
     // Asks for and returns the user's favorite number (as an integer)
     static int PromptUserNumber(string userFavoriteNumber)
     {
-        Console.WriteLine("What is your name?");
+        Console.WriteLine("What is your favorite number?");
         userFavoriteNumber = Console.ReadLine();
         // Converting string to int
         int FavoriteNumber = int.Parse(userFavoriteNumber);
 
         return FavoriteNumber;
     }
+
+    // Accepts an integer as a parameter and returns that number squared (as an integer)
+
 }
