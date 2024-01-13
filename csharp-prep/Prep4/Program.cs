@@ -58,6 +58,8 @@ class Program
         // Sort the numbers in the list and display the new, sorted list
         numbers.Sort();
 
+        Console.WriteLine("The sorted list is:");
+        
         foreach (int number in numbers)
         {
             Console.WriteLine(number);
