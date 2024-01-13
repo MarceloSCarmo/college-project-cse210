@@ -13,6 +13,7 @@ class Program
 
         // variable holds the largest number in the list
         int largest = 0;
+
         int smallest = 1000000000;
 
         // creating a list of numbers
@@ -38,6 +39,7 @@ class Program
                     largest = number;
                 }
 
+                // finding the smallest positive number in the list
                 if (number < smallest && number > 0)
                 {
                     smallest = number;
@@ -52,5 +54,14 @@ class Program
 
         Console.WriteLine($"The largest number is: {largest}");
         Console.WriteLine($"The smallest positive number is: {smallest}");
+        
+        // Sort the numbers in the list and display the new, sorted list
+        numbers.Sort();
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+        
     }
 }
