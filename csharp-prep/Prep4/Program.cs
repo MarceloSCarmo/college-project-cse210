@@ -13,6 +13,7 @@ class Program
 
         // variable holds the largest number in the list
         int largest = 0;
+        int smallest = 1000000000;
 
         // creating a list of numbers
         List<int> numbers = new List<int>();
@@ -30,10 +31,16 @@ class Program
             {
                 numbers.Add(number);
                 
+
                 // finding the largest number in the list
                 if (number > largest)
                 {
                     largest = number;
+                }
+
+                if (number < smallest && number > 0)
+                {
+                    smallest = number;
                 }
             }
         }
@@ -44,5 +51,6 @@ class Program
         Console.WriteLine();
 
         Console.WriteLine($"The largest number is: {largest}");
+        Console.WriteLine($"The smallest positive number is: {smallest}");
     }
 }
