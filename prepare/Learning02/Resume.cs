@@ -10,7 +10,7 @@ public class Resume
         foreach (Job job in _jobs)
         {
             string myJob = job._jobTitle;
-            Console.WriteLine($"{myJob}");
+            
         }
     }
 }
