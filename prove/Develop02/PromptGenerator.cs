@@ -16,9 +16,11 @@ public class PromptGenerator
         _prompts.Add("What was the strongest emotion I felt today?");
         _prompts.Add("If I had one thing I could do over today, what would it be?");
 
+        // calling random method
         Random randomPrompt = new Random();
+        // promt = random list index
         string prompt = _prompts[randomPrompt.Next(_prompts.Count)];
-        
+        // function returns a random item of the list
         return prompt;      
     }
 

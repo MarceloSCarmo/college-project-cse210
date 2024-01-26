@@ -5,7 +5,7 @@ public class Journal
     // Methods below
     public void AddEntry(Entry newEntry) //Write
     {
-        // add entrada
+        
     }
     public void DisplayAll() // Display
     {
