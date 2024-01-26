@@ -8,7 +8,7 @@ public class PromptGenerator
 
     //Method below
     public string GetRandomPrompt()
-    {
+    {   
         //Add the prompts into the list
         _prompts.Add("What was the best part of my day?");
         _prompts.Add("Who was the most interesting person I interacted with today?");
@@ -18,9 +18,8 @@ public class PromptGenerator
 
         Random randomPrompt = new Random();
         string prompt = _prompts[randomPrompt.Next(_prompts.Count)];
-
-        return prompt;
         
+        return prompt;      
     }
 
     

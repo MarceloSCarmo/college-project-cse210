@@ -8,6 +8,12 @@ public class Entry
 
     public void Display()
     {
+        DateTime _date = new DateTime(); 
+        Console.WriteLine(_date.ToString("MM/dd/yyyy"));
+        
+        PromptGenerator _promptText = new PromptGenerator();
+        string newPrompt = _promptText.GetRandomPrompt();
+
         
     }
 }
