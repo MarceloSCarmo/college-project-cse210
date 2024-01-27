@@ -2,15 +2,15 @@ using System.Security.Cryptography;
 
 public class Entry
 {
-    public DateTime _date;
+    public string _date;
     public string _promptText;
     public string _entryText;    
 
     public void Display()
     {
         //gets the date from device's operating system
-        DateTime newDate = new DateTime();
-        _date = newDate.Date;
+        DateTime theCurrentTime = DateTime.Now;
+        _date = theCurrentTime.ToShortDateString();
 
         // gets the random prompt form class PromptGenerator   
         PromptGenerator newPrompt = new PromptGenerator();

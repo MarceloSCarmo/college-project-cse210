@@ -14,7 +14,11 @@ public class Journal
     public void DisplayAll() // Display
     // Iterate through all entries in the journal and display them to the screen
     {
-
+        // print a _entries list
+        foreach (Entry entry in _entries)
+            {
+                Console.WriteLine(entry);
+            }
     }
     public void SaveToFile(string File) // Save
     // 

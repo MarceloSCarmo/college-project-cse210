@@ -22,6 +22,11 @@ class Program
         _menu.Add("Save");
         _menu.Add("Load");
         _menu.Add("Quit");
+        
+        // Creating an object to access Journal class
+        Journal theJournal = new Journal();  
+
+        Entry userEntry = new Entry();
 
         do
         {
@@ -35,32 +40,27 @@ class Program
 
             //receive prompt from the user
             Console.Write("What would you like to do? ");
-            string userPrompt = Console.ReadLine();
-            int newUserPrompt = int.Parse(userPrompt);
+            string newUserPrompt = Console.ReadLine();
+            int userPrompt = int.Parse(newUserPrompt);            
 
-            //Journal theJournal = new Journal();     
-            if (newUserPrompt == 1)
+            if (userPrompt == 1)
             {    
-                //console.WriteLine(AddEntry);
+                userEntry.Display();
+                theJournal._entries.Add(userEntry);
             }
-            else if (newUserPrompt == 2)
+            else if (userPrompt == 2)
             {
-                //console.WriteLine(Display);
+                theJournal.DisplayAll();
             }     
-            else if (newUserPrompt == 3)
+            else if (userPrompt == 3)
             {
-                //console.WriteLine(SaveToFile);
+                //Console.WriteLine(SaveToFile);
             }
-            else if (newUserPrompt == 4)
+            else if (userPrompt == 4)
             {
-                //console.WriteLine(LoadFromFile);
+                //Console.WriteLine(LoadFromFile);
             }           
         }
-        while (newUserPrompt < 5);
-
-        // class Journal
-        //Journal theJournal = new Journal();
-        //theJournal.AddEntry(newEntry);       
-
+        while (newUserPrompt < 5); 
     }
 }
