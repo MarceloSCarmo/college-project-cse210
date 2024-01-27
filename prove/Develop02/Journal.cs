@@ -3,15 +3,21 @@ public class Journal
     public List<Entry> _entries = new List<Entry>();
 
     // Methods below
-    public void AddEntry(Entry newEntry) //Write
+    public void AddEntry(Entry newEntry)
     {
-        
+        // class Entry.
+        //Show the user a random prompt (from a list), and save 
+        //their response, the prompt, and the date as an Entry.
+        Entry userEntry = new Entry();
+        userEntry.Display();
     }
     public void DisplayAll() // Display
+    // Iterate through all entries in the journal and display them to the screen
     {
 
     }
     public void SaveToFile(string File) // Save
+    // 
     {
 
     }
