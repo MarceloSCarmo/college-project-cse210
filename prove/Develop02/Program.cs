@@ -27,7 +27,7 @@ class Program
         Journal theJournal = new Journal();  
 
         Entry userEntry = new Entry();
-
+    
         do
         {
             int count = 1;
@@ -35,7 +35,7 @@ class Program
             {
                 // Display the menu
                 Console.WriteLine($"{count}. {options}");
-                count ++;
+                
             }
 
             //receive prompt from the user
@@ -45,11 +45,11 @@ class Program
 
             if (userPrompt == 1)
             {    
-                userEntry.Display();
+                userEntry.WriteEntry();
                 theJournal._entries.Add(userEntry);
             }
             else if (userPrompt == 2)
-            {
+            {   
                 theJournal.DisplayAll();
             }     
             else if (userPrompt == 3)

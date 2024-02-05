@@ -6,7 +6,7 @@ public class Entry
     public string _promptText;
     public string _entryText;    
 
-    public void Display()
+    public void WriteEntry()
     {
         //gets the date from device's operating system
         DateTime theCurrentTime = DateTime.Now;
